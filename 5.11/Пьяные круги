@@ -1,0 +1,21 @@
+x1 = 0
+y1 = 0
+xChange = 0
+yChange = 0
+def setup():
+    global x1,y1,xChange,yChange
+    frameRate(5)
+    size(600,600)
+    background(14,155,85)
+    x1 = 10
+    y1 = 10
+    xChange = 15
+    yChange = 15
+def draw():
+    global x1,y1,xChange,yChange,w,d
+    fill(random(0,250),random(0,250),random(0,250))
+    w = random(0,120)
+    d = random(0,120)
+    ellipse(x1,y1,w,d)
+    x1 = x1+xChange
+    y1 = y1+yChange

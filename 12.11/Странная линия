@@ -1,0 +1,16 @@
+x = 0
+y = 0
+x1Change = 1
+y1Change = -1
+def setup():
+    size(600,600)
+    global x,y 
+    x = 0
+    y = 0
+def draw():
+    global x,y
+    strokeWeight(5)
+    translate(300,300)
+    point(x,y)
+    x = x+x1Change 
+    y = y+y1Change 

@@ -1,0 +1,63 @@
+x1 = 0
+y1 = 0
+x2 = 0
+y2 = 0
+x3 = 0
+y3 = 0
+x4 = 0
+y4 = 0
+w1 = 60
+d1 = 60
+w2 = 60
+d2 = 60
+w3 = 60
+d3 = 60
+w4 = 60
+d4 = 60
+x1Change = 15
+y1Change = 15
+x2Change = 15
+y2Change = -15
+x3Change = -15
+y3Change = -15
+x4Change = -15
+y4Change = 15
+def setup():
+    global x1,y1,x1Change,y1Changex2Change,y2Change,x3Change,y3Change,x4Change,y4Change,w1,d1,w2,d2,w3,d3,w4,d4
+    frameRate(5)
+    size(600,600)
+    x1 = 0
+    y1 = 0
+    x2 = 0
+    y2 = 0
+    x3 = 0
+    y3 = 0
+    x4 = 0
+    y4 = 0
+    x1Change = 15
+    x1Change = 15
+    x2Change = 15
+    y2Change = -15
+    x3Change = -15
+    y3Change = -15
+    x4Change = -15
+    y4Change = 15
+def draw():
+    background(183,59,169)
+    fill(random(0,255),random(0,255),random(0,255))
+    translate(300,300)
+    global x1,y1,x2,y2,x3,y3,x4,y4,x1Change,y1Change,x2Change,y2Change,x3Change,y3Change,x4Change,y4Change,w1,d1,w2,d2,w3,d3,w4,d4
+    w = random(0,120)
+    d = random(0,120)
+    ellipse(x1,y1,w,d)
+    x1 = x1+x1Change
+    y1 = y1+y1Change
+    ellipse(x2,y2,w,d)
+    x2 = x2+x2Change
+    y2 = y2+y2Change
+    ellipse(x3,y3,w,d)
+    x3 = x3+x3Change
+    y3 = y3+y3Change
+    ellipse(x4,y4,w,d)
+    x4 = x4+x4Change
+    y4 = y4+y4Change

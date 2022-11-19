@@ -1,0 +1,88 @@
+x1 = 0
+y1 = 0
+x2 = 0
+y2 = 0
+x3 = 0 
+y3 = 0
+x4 = 0
+y4 = 0
+x5 = 0
+y5 = 0
+x6 = 0
+y6 = 0
+x7 = 0
+y7 = 0
+x8 = 0
+y8 = 0
+x9 = 0
+y9 = 0
+x10 = 0
+y10 = 0
+y1Change = 0
+y2Change = 0
+y3Change = 0
+y4Change = 0
+y5Change = 0
+y6Change = 0
+y7Change = 0
+y8Change = 0
+y9Change = 0
+y10Change = 0
+def setup():
+    size(500,500)
+    background(0,0,0)
+    global x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,x6,y6,x7,y7,x8,y8,x9,y9,x10,y10,y1Change,y2Change,y3Change,y4Change,y5Change,y6Change,y7Change,y8Change,y9Change,y10Change
+    x1 = 0
+    y1 = 0
+    x2 = 50
+    y2 = 0
+    x3 = 100 
+    y3 = 0
+    x4 = 150
+    y4 = 0
+    x5 = 200
+    y5 = 0
+    x6 = 250
+    y6 = 0
+    x7 = 300
+    y7 = 0
+    x8 = 350
+    y8 = 0
+    x9 = 400
+    y9 = 0
+    x10 = 450
+    y10 = 0
+    y1Change = 10
+    y2Change = 15
+    y3Change = 17
+    y4Change = 19
+    y5Change = 5
+    y6Change = 6
+    y7Change = 2
+    y8Change = 1
+    y9Change = 13
+    y10Change = 12
+def draw():
+    stroke(255,255,255)
+    frameRate(5)
+    global x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,x6,y6,x7,y7,x8,y8,x9,y9,x10,y10,y1Change,y2Change,y3Change,y4Change,y5Change,y6Change,y7Change,y8Change,y9Change,y10Change
+    point(x1,y1)
+    point(x2,y2)
+    point(x3,y3)
+    point(x4,y4)
+    point(x5,y5)
+    point(x6,y6)
+    point(x7,y7)
+    point(x8,y8)
+    point(x9,y9)
+    point(x10,y10)
+    y1 = y1+y1Change
+    y2 = y2+y2Change
+    y3 = y3+y3Change
+    y4 = y4+y4Change
+    y5 = y5+y5Change
+    y6 = y6+y6Change
+    y7 = y7+y7Change
+    y8 = y8+y8Change
+    y9 = y9+y9Change
+    y10 = y10+y10Change

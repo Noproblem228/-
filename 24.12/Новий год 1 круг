@@ -1,0 +1,19 @@
+x = 0
+y = 0
+xChange = 0 
+yChange = 0
+def setup():
+    size(600,600)
+    global x,y,xChange,yChange 
+    frameRate(5)    
+    x = 290
+    y = 290
+    xChange = 10 
+    yChange = 10
+def draw():
+    global x,y,xChange,yChange
+    background(62,231,245) 
+    point(x,y)
+    strokeWeight(random(0,200))
+    x = (random(0,600))
+    y = (random(0,600))

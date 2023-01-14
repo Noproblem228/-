@@ -1,0 +1,32 @@
+angle = 0
+def setup():
+    size(600,600)
+    global angle
+def draw():
+    global angle
+    translate(300,300)
+    background(64,237,53)
+    strokeWeight(10)
+    line(0,0,0,400)
+    strokeWeight(2)
+    ellipse(0,0,100,100)
+    
+    rotate(radians(angle))
+    ellipse(0,120,50,150)
+    angle = angle + 1
+    
+    
+    rotate(radians(60))
+    ellipse(0,120,50,150)
+    
+    rotate(radians(60))
+    ellipse(0,120,50,150)
+    
+    rotate(radians(60))
+    ellipse(0,120,50,150)
+    
+    rotate(radians(60))
+    ellipse(0,120,50,150)
+    
+    rotate(radians(60))
+    ellipse(0,120,50,150)

@@ -1,0 +1,29 @@
+x = 0
+y = 0
+w = 0
+d = 0
+x1Change = 0
+y1Change = 0
+mode = 0
+def setup():
+    size(600,600)
+    global x,y,x1Change,y1Change,w,d,mode
+    x = 300
+    y = 300 
+    w = 100
+    d = 100
+    mode = 0
+    #frameRate(5)
+    global x,y,x1Change,y1Change,w,d,mode
+    background(243,36,240)
+    ellipse(x,y,w,d)
+    if x >= 600-50:
+        mode = 1
+    if x <= 0 + 50:
+        mode = 0
+    if mode == 1:
+        x = x-2 
+    if mode == 0:
+        x = x+2
+    #if mode == 1:
+        #x = x-2 

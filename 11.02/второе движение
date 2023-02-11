@@ -1,0 +1,25 @@
+x = 0
+y = 0
+w = 0
+d = 0 
+wChange= 0
+dChange = 0
+def setup():
+    size(600,600)
+    global x,y,w,d,wChange,dChange
+    x = 300
+    y = 300
+    w = 100
+    d = 100
+    wChange= 1
+    dChange = 1
+def draw():
+    global x,y,w,d,wChange,dChange
+    background(43,34,21)
+    ellipse(x,y,w,d)
+    w = w + wChange
+    d = d + dChange
+    if(w == 400) and (d == 400):
+        w = 0
+        d = 0
+    

@@ -1,0 +1,56 @@
+x1 = 0
+y1 = 0
+w1 = 0
+d1 = 0
+x2 = 0
+y2 = 0
+w2 = 0
+d2 = 0
+w1Change = 0
+d2Change = 0
+w1Change = 0
+d2Change = 0
+angle = 0
+Angle = 0
+def setup():
+    size(600,600)
+    global x1,x2,y1,y2,w1,d1,w2,d2,w1Change,w2Change,d1Change,d2Change,angle,Angle
+    #background(39,38,28)
+    frameRate(150)
+    x1 = -50
+    y1 = -50
+    w1 = 100
+    d1 = 100
+    x2 = -50
+    y2 = -50
+    w2 = 100
+    d2 = 100
+    w1Change = 1
+    d1Change = 1
+    w2Change = 1
+    d2Change = 1
+    angle = 1
+    Angle = 1
+def draw():
+    global x1,x2,y1,y2,w1,d1,w2,d2,w1Change,w2Change,d1Change,d2Change,angle,Angle
+    background(128,82,255)
+    translate(300,300)
+    rotate(radians(angle))
+    angle = angle + 1
+    push()
+    scale(Angle)
+    Angle = Angle + 0.1
+    rect(x1,y1,w1,d1)
+    pop()
+    translate(0,0)
+    rotate(radians(45))
+    scale(Angle)
+    rect(x2,y2,w2,d2)
+    if((w1 == 100) and (d1 == 100) and (w2 == 100) and (d2 == 100)):
+        w1 = 0
+        d1 = 0
+        x2 = 0
+        y2 = 0
+        w2 = 0
+        d2 = 0
+    

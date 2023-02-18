@@ -1,0 +1,44 @@
+x = 0
+y = 0
+w = 0
+d = 0
+wChange = 0
+dChange = 0
+w1Change = 0
+d1Change = 0
+lever = 0
+angle = 0
+def setup():
+    size(600,600)
+    frameRate(100)
+    global x,y,w,d,wChange,dChange,w1Change,d1Change,lever,angle
+    x = -130
+    y = -130
+    w = 150
+    d = 150
+    wChange = 1
+    dChange = 1
+    w1Change = -3
+    d1Change = -3
+    lever = 10
+    angle = 1
+def draw():
+    global x,y,w,d,wChange,dChange,w1Change,d1Change,lever,angle
+    translate(300,300)
+    #background(34,59,40)
+    rotate(radians(angle))
+    angle = angle + 0.1
+    rect(x,y,w,d)
+    w = w+wChange 
+    d = d+dChange
+    if((w == 400) and (d ==400)):
+        lever = 400
+    if (lever == 400):
+        w = w-2
+        d = d-2
+    if((w == 0) and (d ==0)):
+        lever = 0
+    if (lever == 0):
+        w = w+1
+        d = d+1
+    

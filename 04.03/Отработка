@@ -1,0 +1,54 @@
+x = 0
+y = 0
+w = 0
+d = 0 
+n = 0
+q = 0
+x1 = 0
+y1 = 0
+w1 = 0
+d1 = 0
+xChange= 0
+yChange = 0
+def setup():
+    size(600,600)
+    global x,y,w,d,xChange,yChange,n,q,x1,y1,w1,d1
+    frameRate(300)
+    x = 300
+    n = 0 
+    y = 300
+    w = 100
+    d = 100
+    xChange= 1
+    yChange = 1
+    q = 0
+    x1 = 300
+    y1 = 0
+    w1 = 100
+    d1 = 100
+def draw():
+    global x,y,w,d,xChange,yChange,n,q,x1,y1,w1,d1
+    background(43,34,21)
+    ellipse(x,y,w,d)
+    if(mousePressed== True):
+        background(43,34,21)
+    if (n == 1):
+        x = x + xChange
+    if(n ==0):
+        x = x - xChange
+    if(x == 0)and(y == 300):
+        n = 1
+    if(x == 600)and(y==300):
+        n = 0
+    ellipse(x1,y1,w1,d1)
+    if(mousePressed== True):
+        background(43,34,21)
+    if (q == 0):
+        y1 = y1 + yChange
+    if(q ==1):
+        y1 = y1 - yChange
+    if(x1 == 300)and(y1 == 0):
+        q = 0
+    if(x1 == 300)and(y1==600):
+        q = 1
+    

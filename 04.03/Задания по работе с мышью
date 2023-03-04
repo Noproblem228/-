@@ -1,0 +1,13 @@
+x = 0
+y = 0
+def setup():
+    size(600,600)
+    background(7,7,8)
+    stroke(255,255,255)
+    strokeWeight(5)
+def draw():
+    x =random(601)
+    y =random(601) 
+    point(x,y)
+    if(mouseButton == LEFT):
+        background(7,7,8)

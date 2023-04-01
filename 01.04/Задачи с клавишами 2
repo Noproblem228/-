@@ -1,0 +1,19 @@
+x = 0
+y = 0
+w = 0
+d = 0
+def setup():
+    size(600,600)
+    global x,y,w,d
+    background(0,0,255)
+    x = 250
+    y = 300
+    w = 150
+    d = 50
+def draw():
+    global x,y,w,d
+    background(47,245,101)
+    rect(x,y,w,d)
+    if(mousePressed == True)and(mouseX > x)and( mouseX < (x + w))and(mouseY >y )and(mouseY < (y + d)):
+        x += (mouseX - pmouseX)
+        y += (mouseY - pmouseY)

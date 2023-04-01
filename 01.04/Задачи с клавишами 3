@@ -1,0 +1,75 @@
+x = 0
+y = 0
+w = 0
+d = 0
+x1 = 0
+y1 = 0
+w1 = 0
+d1 = 0
+x2 = 0
+y2 = 0
+w2 = 0
+d2 = 0
+x3 = 0
+y3 = 0
+w3 = 0
+d3 = 0
+x4 = 0
+y4 = 0
+w4 = 0
+d4 = 0
+def setup():
+    global x,y,w,d,x1,y1,w1,d1,x2,y2,w2,d2,x3,y3,w3,d3,x4,y4,w4,d4
+    size(600,600)
+    x = 350
+    y = 300
+    w = 50
+    d = 50
+    x1 = 0
+    y1 = 0
+    w1 = 200
+    d1 = 100
+    x2 = 0
+    y2 = 100
+    w2 = 200
+    d2 = 100
+    x3 = 0
+    y3 = 200
+    w3 = 200
+    d3 = 100
+    x4 = 0
+    y4 = 300
+    w4 = 200
+    d4 = 100
+def draw():
+    global x,y,w,d,x1,y1,w1,d1,x2,y2,w2,d2,x3,y3,w3,d3,x4,y4,w4,d4
+    background(0,255,0)
+    ellipse(x,y,w,d)
+    rect(x1,y1,w1,d1)
+    rect(x2,y2,w2,d2)
+    rect(x3,y3,w3,d3)
+    rect(x4,y4,w4,d4)
+    push()
+    fill(110)
+    text(u"Вверх",70,50)
+    pop()
+    push()
+    fill(110)
+    text(u"Вниз",70,150)
+    pop()
+    push()
+    fill(110)
+    text(u"Вправо",70,250)
+    pop()
+    push()
+    fill(110)
+    text(u"Влево",70,350)
+    pop()
+    if(mousePressed == True)and(mouseX > x1)and( mouseX < (x1 + w1))and(mouseY >y1 )and(mouseY < (y1 + d)):
+        y = y - 2
+    if(mousePressed == True)and(mouseX > x2)and( mouseX < (x2 + w2))and(mouseY >y2 )and(mouseY < (y2 + d2)):
+         y = y + 2
+    if(mousePressed == True)and(mouseX > x3)and( mouseX < (x3 + w3))and(mouseY >y3 )and(mouseY < (y3 + d3)):
+        x = x + 2
+    if(mousePressed == True)and(mouseX > x4)and( mouseX < (x4 + w4))and(mouseY >y4 )and(mouseY < (y4 + d4)):
+        x = x - 2

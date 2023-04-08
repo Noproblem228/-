@@ -1,0 +1,29 @@
+x = 0
+y = 0
+z = 0
+w = 0
+d = 0
+def setup():
+    size(600,600)
+    background(0,255,0)
+    global x,y,z,w,d
+    x = 300
+    y = 300
+    z = 100
+    w = 200
+    d = 200
+def draw():
+    global x,y,w,d,z
+    background(0,255,0)
+    ellipse(x,y,w,d)
+def keyPressed():
+    global x,y,w,d
+    if key == CODED :
+        if keyCode == UP:
+            y = y - 10
+        if keyCode == DOWN:
+            y = y + 10
+        if keyCode == LEFT:
+            x = x - 10
+        if keyCode ==RIGHT:
+            x = x + 10

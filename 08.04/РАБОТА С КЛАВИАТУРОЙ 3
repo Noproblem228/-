@@ -1,0 +1,28 @@
+x = 0
+y = 0
+z = 0
+w = 0
+myText = ''
+def setup():
+    size(600,600)
+    background(0,255,0)
+    global x,y,z,w,myText
+    x = 200
+    y = 200
+    z = 100
+    w = 0
+    myText = u'я люблю программирование!'
+def draw():
+    global x,y,z,w,myText
+def keyPressed():
+    global x,y,z,w,myText
+    textSize(30)
+    z = z + 20
+    if(key == TAB):
+        z = z+80
+    elif (key == ENTER):
+        y = y + 50
+        z = 100
+    else:
+        myText = myText + key
+        text(myText,z,y)

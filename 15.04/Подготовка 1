@@ -1,0 +1,28 @@
+x = 0
+y = 0
+w = 0
+d = 0
+def setup():
+    size(1000,700)
+    global x,y,w,d
+    #background(0,0,0)
+    x = 500
+    y = 350
+    w = 200
+    d = 200
+def draw():
+    global x,y,w,d
+    #центральное солнце с затмением
+    ellipse(500,350,70,70)
+    push()
+    strokeWeight(5)
+    pop()    
+    push()
+    fill(255,235,3)
+    ellipse(x,y,w,d)
+    fill(0,0,0)
+    ellipse(x,y,192,192)
+    pop()
+    fill(193,193,185)
+    ellipse(550,300,50,50)
+    #КОРАБЛЬ
